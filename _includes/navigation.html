@@ -1,0 +1,48 @@
+<ul class="mt-5 mb-5">
+    {% for item in site.data.shared.navigation %}
+        <li>
+            {% if item.url == page.permalink %}
+                {% assign isActive = true %}
+                <a href="{{ item.url }}" class="block text-sm font-size pl-3 pr-3 pt-2 pb-2 bg-gray-400 text-gray-900 rounded-sm relative">
+            {% else %}
+                {% assign isActive = false %}
+                <a href="{{ item.url }}" class="block text-sm font-size pl-3 pr-3 pt-2 pb-2 hover:bg-gray-400 hover:text-gray-900 rounded-sm relative">
+            {% endif %}
+                {% if item.icon %}
+                    <i class="{{ item.icon }} pr-1"></i>
+                {% endif %}
+                {{ item.label }}
+                {% if item.children %}
+                    {% if isActive %}
+                        <i class="fas fa-dot-circle absolute top-0 right-0 leading-normal pt-3 pr-3" title="You are here!"></i>
+                    {% else %}
+                        <i class="fas fa-angle-down absolute top-0 right-0 leading-normal pt-3 pr-3"></i>
+                    {% endif %}
+                {% endif %}
+            </a>
+            {% if item.children %}
+                <ul class="ml-4">
+                    {% for childItem in item.children %}
+                        <li>
+                            {% if childItem.url == page.permalink %}
+                                {% assign isChildActive = true %}
+                                <a href="{{ childItem.url }}" class="block text-sm font-size pl-3 pr-3 pt-2 pb-2 bg-gray-400 text-gray-900 rounded-sm relative">
+                            {% else %}
+                                {% assign isChildActive = false %}
+                                <a href="{{ childItem.url }}" class="block text-sm font-size pl-3 pr-3 pt-2 pb-2 hover:bg-gray-400 hover:text-gray-900 rounded-sm relative">
+                            {% endif %}
+                                {% if childItem.icon %}
+                                    <i class="{{ childItem.icon }} pr-1"></i>
+                                {% endif %}
+                                {{ childItem.label }}
+                                {% if isChildActive %}
+                                    <i class="fas fa-dot-circle absolute top-0 right-0 leading-normal pt-3 pr-3" title="You are here!"></i>
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

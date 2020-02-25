@@ -1,0 +1,42 @@
+general:
+  project:
+    name: HttpConnect
+    slogan: PHP SDKs Made Easy
+    description: Create external API SDKs in PHP the right way.
+
+logo:
+  url: https://avatars.githubusercontent.com/u/61204614
+  alt: HttpConnect Logo
+
+github:
+  organizationUrl: https://github.com/http-connect
+
+navigation:
+  - url: /
+    label: Home
+    icon: fas fa-door-open
+  - url: /docs
+    label: Documentation
+    icon: fas fa-book-open
+    children:
+      - url: /docs/library
+        label: Library
+        icon: fa fa-book
+      - url: /docs/boilerplate
+        label: Boilerplate
+        icon: fa fa-puzzle-piece
+      - url: /docs/standard
+        label: Standard
+        icon: fa fa-gavel
+      - url: /docs/plugins
+        label: Plugins
+        icon: fa fa-plug
+      - url: /docs/adapters
+        label: Adapters
+        icon: fa fa-link
+  - url: /about
+    label: About
+    icon: fa fa-university
+  - url: /contact
+    label: Contact
+    icon: far fa-envelope-open

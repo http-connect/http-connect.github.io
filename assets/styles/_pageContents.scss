@@ -1,0 +1,33 @@
+.pageContents {
+  @apply ml-5 mr-5;
+
+  h1 {
+    @apply text-3xl font-semibold text-gray-800 border-b border-solid border-gray-300 leading-12 pb-5;
+  }
+
+  h2 {
+    @apply text-xl font-light text-gray-600 uppercase tracking-widest pb-5;
+  }
+
+  > p {
+    @apply text-sm text-gray-700 mt-5 mb-5 leading-normal;
+  }
+}
+
+.sharedSpaceHeading {
+  @apply border-b border-solid border-gray-300 h-22 relative mb-5;
+
+  &-inner {
+    @apply absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    @apply border-b-0 pb-0 text-2xl leading-8;
+  }
+
+  h2 {
+    @apply pb-0 leading-none text-sm leading-4;
+  }
+}

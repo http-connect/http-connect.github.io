@@ -1,0 +1,22 @@
+.highlight {
+  font-family: 'JetBrains Mono', monospace;
+
+  @apply bg-gray-100;
+
+  @apply text-xs leading-5 mt-5 mb-5 shadow-sm;
+
+  pre {
+    font-family: 'JetBrains Mono', monospace;
+
+    @apply text-xs leading-5;
+  }
+
+  .gutter {
+    @apply text-right text-xs leading-5 pt-2 pb-2 pl-5 pr-5;
+    @apply bg-gray-300 text-gray-600;
+  }
+
+  .code {
+    @apply pl-5;
+  }
+}

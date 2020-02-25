@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ site.data.manifest['docs.css'] }}">
+    <title>{{ page.title | default: site.data.shared.general.project.name }}</title>
+    <meta name="description" content="{{ site.data.shared.general.project.description }}"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{{site.data.shared.logo.url}}" />
+    <script src="https://kit.fontawesome.com/dfa01f033d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <div class="bg-white h-screen" style="width: calc(100% - 16rem); margin-left: 16rem;">
+            <main class="pageContents">
+                {% include anchor_headings.html html=content %}
+            </main>
+        </div>
+        <div class="bg-gray-300 min-h-screen h-full fixed top-0 left-0 z-10 w-64">
+            {% include sidebar.html %}
+        </div>
+    </div>
+</body>
+</html>
